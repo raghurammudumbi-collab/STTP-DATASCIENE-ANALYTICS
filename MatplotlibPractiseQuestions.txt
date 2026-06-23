@@ -1,0 +1,93 @@
+Matplotlib is the core data visualization library in Python used to create static, animated, and interactive figures. The most common way to use it is through the pyplot module, which is typically imported as plt
+
+1. Line Plot
+
+import matplotlib.pyplot as plt
+
+# Data points
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 1, 5, 3]
+
+# Create a line plot with custom markers and line style
+plt.plot(x, y, color='blue', linestyle='--', marker='o', label='Trend A')
+
+# Add titles and labels
+plt.title('Simple Line Plot')
+plt.xlabel('X-Axis Label')
+plt.ylabel('Y-Axis Label')
+plt.legend()  # Displays the label
+
+# Display the plot
+plt.show()
+
+2. Bar Chart
+
+import matplotlib.pyplot as plt
+
+categories = ['Apples', 'Bananas', 'Cherries', 'Dates']
+values = [15, 30, 45, 10]
+
+# Create a bar chart with custom colors
+plt.bar(categories, values, color=['red', 'yellow', 'darkred', 'brown'])
+
+plt.title('Fruit Count Comparison')
+plt.xlabel('Fruit Type')
+plt.ylabel('Quantity')
+
+plt.show()
+
+
+3. Scatter Plot
+
+import matplotlib.pyplot as plt
+
+x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11]
+y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78]
+
+# Scatter plot with customized marker size and color
+plt.scatter(x, y, color='purple', marker='x', s=100)
+
+plt.title('Vehicle Age vs. Speed')
+plt.xlabel('Age of Car (Years)')
+plt.ylabel('Max Speed (MPH)')
+
+plt.show()
+
+
+4. Histogram
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate 1000 random data points following a normal distribution
+data = np.random.normal(0, 1, 1000)
+
+# Create histogram with 20 bins
+plt.hist(data, bins=20, color='green', edgecolor='black')
+
+plt.title('Normal Distribution Frequency')
+plt.xlabel('Value Range')
+plt.ylabel('Frequency')
+
+plt.show()
+
+5. Multi-Plot Subplots
+
+import matplotlib.pyplot as plt
+
+# Create a grid of 1 row and 2 columns
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+
+# First plot (Left side)
+ax1.plot([1, 2, 3], [10, 20, 30], color='orange')
+ax1.set_title('Subplot 1: Line')
+
+# Second plot (Right side)
+ax2.scatter([1, 2, 3], [30, 20, 10], color='blue')
+ax2.set_title('Subplot 2: Scatter')
+
+# Adjust layout to prevent overlapping text
+plt.tight_layout()
+plt.show()
+
+Essential Syntax Summaryplt.figure(figsize=(width, height)): Changes the structural dimensions of your image.plt.grid(True): Adds a background grid system for easier value reading.plt.savefig('name.png'): Saves the output chart as an external file instead of just showing it.If you would like to customize these further, please share what kind of dataset you are working with or which specific style modifications (like colors, axes, or fonts) you want to apply.

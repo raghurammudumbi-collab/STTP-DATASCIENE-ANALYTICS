@@ -1,0 +1,69 @@
+The pandas library is Python's premier tool for data manipulation. It revolves around two main structures: Series (1D arrays) and DataFrames (2D tables).
+
+
+1. Creating a DataFrame
+
+  import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'London', 'Paris']
+}
+df = pd.DataFrame(data)
+print(df)
+
+2. Basic Data Exploration
+
+ # View the first 2 rows
+print(df.head(2))
+
+# Get summary statistics for numerical columns
+print(df.describe())
+
+# Check data types and missing values
+print(df.info())
+
+
+3. Filtering Data
+
+# Filter rows where Age is greater than 28
+older_df = df[df['Age'] > 28]
+print(older_df)
+
+
+4. Sampling Data
+
+# Sample exactly 2 random rows
+print(df.sample(n=2))
+
+# Sample 50% of the dataset randomly
+print(df.sample(frac=0.5))
+
+
+5. Grouping and Aggregation
+
+import pandas as pd
+
+sales_data = {
+    'Region': ['North', 'North', 'South', 'South'],
+    'Sales': [250, 300, 150, 200]
+}
+df_sales = pd.DataFrame(sales_data)
+
+# Calculate total sales by Region
+total_sales = df_sales.groupby('Region')['Sales'].sum()
+print(total_sales)
+
+
+6. Handling Missing Data
+
+import numpy as np
+
+# Introduce a missing value
+df.loc[0, 'Age'] = np.nan 
+
+# Fill missing values with the mean Age
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+print(df)
+

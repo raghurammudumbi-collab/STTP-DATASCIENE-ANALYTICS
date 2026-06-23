@@ -1,0 +1,66 @@
+Python is a versatile, high-level programming language celebrated for its simple syntax and exceptional readability.Below is a collection of essential Python code examples categorized by difficulty level, ranging from beginner fundamentals to intermediate programming concepts.
+
+1. Hello World
+
+# This program displays a message on the screen
+print("Hello, World!")
+
+
+2. Variables and Basic Arithmetic
+
+# Assigning values to variables
+num1 = 15
+num2 = 25
+
+# Adding the values
+total = num1 + num2
+
+# Printing using an f-string
+print(f"The sum of {num1} and {num2} is {total}")
+
+
+3. Conditional Statements (If-Else)
+
+# Checking if a number is even or odd
+number = 7
+
+if number % 2 == 0:
+    print(f"{number} is an Even number.")
+else:
+    print(f"{number} is an Odd number.")
+
+
+4. Loops and Collections
+
+# Creating a list of fruits
+fruits = ["apple", "banana", "cherry"]
+
+# Looping through each item in the list
+for fruit in fruits:
+    print(f"I enjoy eating {fruit}s.")
+
+5. Functions
+
+# Defining a function that calculates an area
+def calculate_area(width, height):
+    return width * height
+
+# Calling the function
+result = calculate_area(5, 10)
+print(f"The calculated area is: {result}")
+
+
+6. Object-Oriented Programming (OOP)
+
+# Defining a class blueprint
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_info(self):
+        return f"This car is a {self.brand} {self.model}."
+
+# Creating an instance (object) of the class
+my_car = Car("Toyota", "Corolla")
+print(my_car.display_info())

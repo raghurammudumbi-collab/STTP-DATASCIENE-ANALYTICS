@@ -1,0 +1,107 @@
+
+NumPy is the fundamental Python library used for working with high-performance multidimensional arrays and mathematical operations. It is significantly faster than standard Python lists because it stores data in contiguous memory blocks and processes calculations natively in C
+
+
+1. Creating Arrays
+
+import numpy as np
+
+# Create a 1D array from a list
+arr_1d = np.array([1, 2, 3, 4, 5])
+# Output: [1 2 3 4 5]
+
+# Create a 2D array (Matrix)
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+# Output: 
+# [[1 2 3]
+#  [4 5 6]]
+
+# Generate an array of 5 zeros
+zeros = np.zeros(5)
+# Output: [0. 0. 0. 0. 0.]
+
+# Generate a sequence of numbers from 0 to 9
+sequence = np.arange(10)
+# Output: [0 1 2 3 4 5 6 7 8 9]
+
+
+2. Basic Arithmetic (Vectorization)
+
+import numpy as np
+
+a = np.array([10, 20, 30, 40])
+b = np.array([1, 2, 3, 4])
+
+# Element-wise addition
+print(a + b)  
+# Output: [11 22 33 44]
+
+# Element-wise multiplication
+print(b * 2)  
+# Output: [2 4 6 8]
+
+# Squaring all elements
+print(b ** 2) 
+# Output: [1 4 9 16]
+
+
+3. Slicing and Filtering
+
+import numpy as np
+
+arr = np.array([10, 15, 20, 25, 30])
+
+# Slice from index 1 to 4 (exclusive)
+print(arr[1:4])
+# Output: [15 20 25]
+
+# Filter elements greater than 20
+condition = arr > 20
+print(arr[condition])
+# Output: [25 30]
+
+4. Basic Aggregations and Statistical Summary
+
+import numpy as np
+
+matrix = np.array([[1, 2], [3, 4]])
+
+# Sum of all elements
+print(np.sum(matrix))       # Output: 10
+
+# Maximum value
+print(np.max(matrix))       # Output: 4
+
+# Average (Mean) value
+print(np.mean(matrix))      # Output: 2.5
+
+# Column-wise sum (Axis 0)
+print(np.sum(matrix, axis=0)) # Output: [4 6]
+
+5. Reshaping Arrays
+
+import numpy as np
+
+# Start with a 1D array of 6 elements
+flat_arr = np.array([1, 2, 3, 4, 5, 6])
+
+# Reshape to 2 rows and 3 columns
+reshaped = flat_arr.reshape(2, 3)
+# Output:
+# [[1 2 3]
+#  [4 5 6]]
+
+
+6. Linear Algebra (Matrix Multiplication)
+
+import numpy as np
+
+matrix_a = np.array([[1, 2], [3, 4]])
+matrix_b = np.array([[2, 0], [1, 2]])
+
+# Dot product of matrices
+product = np.dot(matrix_a, matrix_b)
+# Output:
+# [[ 4  4]
+#  [10  8]]
+
